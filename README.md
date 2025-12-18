@@ -10,6 +10,15 @@ ACMS features a parallel-stream design using separable convolution tokenization 
 - [X] **Hybrid Architecture**: Synergistically combines Separable Convolution Tokenization to capture multi-scale local textures with Dual-Stream Swin -Transformers to model hierarchical spatial-spectral and structural dependencies.
 - [X] **Alignment-Aware Fusion**: Introduces a novel Gated Cross-Modality Dual-Attention mechanism that employs learnable modality weighting and gating to maintain robustness against spatial misalignment and sensor noise.
 - [X] **Multi-Benchmark Validation**: Proven state-of-the-art performance on the classification of complex landscapes using Houston 2013 (92.51% OA), Trento (99.93% OA), and MUUFL (92.56% OA) datasets.
-- [X] **Unified Co-Learning**: Systematically addresses the five core challenges of multimodal learning—Representation, Translation, Alignment, Fusion, and Co-learning—within a single end-to-end framework.
+- [X] **Unified Co-Learning**: Systematically addresses the five core challenges of multimodal learning Representation, Translation, Alignment, Fusion, and Co-learning—within a single end-to-end framework.
 - [X] **Adaptive Integration**: Features a Shared Transformer Head that refines fused feature vectors to ensure bidirectional information exchange and highly discriminative joint representations.
+
+## Installation & Environment Setup
+The main software used was **Python 3.10+**.
+The complete list of required packages is listed here  Key dependencies include:
+* **Deep Learning:** `torch`(PyTorch) , `torchvision`, `timm`
+* **Remote Sensing:** `spectral`, `scipy`
+* **Data Processing:** `numpy`, `pandas`, `scikit-learn`
+* **Visualization:** `matplotlib`, `seaborn`, `tqdm`
+
 
