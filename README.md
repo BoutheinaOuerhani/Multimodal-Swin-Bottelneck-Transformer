@@ -26,6 +26,12 @@ The complete list of required packages is listed here, key dependencies include:
 
 ## Models
 The following conventional classifier methods will be available:
-
-
+* [RF](https://ieeexplore.ieee.org/document/1396322) 
+* [SVM](https://ieeexplore.ieee.org/document/1323134)
+The following classic backbone networks methods will be available:
+* [Coupled CNN] (https://ieeexplore.ieee.org/abstract/document/8985546/)
+* [CCR-NET] (https://ieeexplore.ieee.org/abstract/document/9598903/)
+The following classic backbone networks methods will be available:
+* [SpectralFormer] (https://ieeexplore.ieee.org/abstract/document/9627165)
+* [EXViT] (https://ieeexplore.ieee.org/abstract/document/10147258/)
 
