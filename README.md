@@ -15,7 +15,7 @@ ACMS features a parallel-stream design using separable convolution tokenization 
 
 ## Installation & Environment Setup
 The main software used was **Python 3.10+**.
-The complete list of required packages is listed here  Key dependencies include:
+The complete list of required packages is listed here, key dependencies include:
 * **Deep Learning:** `torch`(PyTorch) , `torchvision`, `timm`
 * **Remote Sensing:** `spectral`, `scipy`
 * **Data Processing:** `numpy`, `pandas`, `scikit-learn`
