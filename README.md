@@ -18,11 +18,14 @@ The complete list of required packages is listed here, key dependencies include:
 * **Remote Sensing:** `spectral`, `scipy`
 * **Data Processing:** `numpy`, `pandas`, `scikit-learn`
 * **Visualization:** `matplotlib`, `seaborn`, `tqdm`
-
+___________
 ## Datasets
 - [X] **Trento Dataset:** Captured via AISA Eagle and Optech ALTM 3100EA sensors, this rural scene consists of 600 × 166 pixels with 63 HSI bands and a single LiDAR elevation raster at 1m resolution.
-
 - [X] **MUUFL Dataset:** Collected by the ROSIS sensor over the University of Southern Mississippi, featuring 64 noise-free spectral bands and dual LiDAR rasters across a 325 × 220 grid with 11 urban classes.
-
 - [X] **Houston 2013 Dataset:** A benchmark from the 2013 IEEE GRSS Contest acquired by the ITRES CASI-1500 sensor, comprising 349 × 1905 pixels with 144 spectral bands and co-registered LiDAR DSM data.
+___________
+## Models
+The following conventional classifier methods will be available:
+
+
 
