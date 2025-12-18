@@ -10,7 +10,7 @@ ___________
 - [X] **Multi-Benchmark Validation**: Proven state-of-the-art performance on the classification of complex landscapes using Houston 2013 (92.51% OA), Trento (99.93% OA), and MUUFL (92.56% OA) datasets.
 - [X] **Unified Co-Learning**: Systematically addresses the five core challenges of multimodal learning Representation, Translation, Alignment, Fusion, and Co-learning—within a single end-to-end framework.
 - [X] **Adaptive Integration**: Features a Shared Transformer Head that refines fused feature vectors to ensure bidirectional information exchange and highly discriminative joint representations.
-___________
+
 ## Installation & Environment Setup
 The main software used was **Python 3.10+**.
 The complete list of required packages is listed here, key dependencies include:
@@ -18,12 +18,12 @@ The complete list of required packages is listed here, key dependencies include:
 * **Remote Sensing:** `spectral`, `scipy`
 * **Data Processing:** `numpy`, `pandas`, `scikit-learn`
 * **Visualization:** `matplotlib`, `seaborn`, `tqdm`
-___________
+
 ## Datasets
 - [X] **Trento Dataset:** Captured via AISA Eagle and Optech ALTM 3100EA sensors, this rural scene consists of 600 × 166 pixels with 63 HSI bands and a single LiDAR elevation raster at 1m resolution.
 - [X] **MUUFL Dataset:** Collected by the ROSIS sensor over the University of Southern Mississippi, featuring 64 noise-free spectral bands and dual LiDAR rasters across a 325 × 220 grid with 11 urban classes.
 - [X] **Houston 2013 Dataset:** A benchmark from the 2013 IEEE GRSS Contest acquired by the ITRES CASI-1500 sensor, comprising 349 × 1905 pixels with 144 spectral bands and co-registered LiDAR DSM data.
-___________
+
 ## Models
 The following conventional classifier methods will be available:
 
