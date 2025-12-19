@@ -20,9 +20,9 @@ The complete list of required packages is listed here, key dependencies include:
 * **Visualization:** `matplotlib`, `seaborn`, `tqdm`
 
 ## Datasets
-- [X] **Trento Dataset:** Captured via AISA Eagle and Optech ALTM 3100EA sensors, this rural scene consists of 600 × 166 pixels with 63 HSI bands and a single LiDAR elevation raster at 1m resolution.
-- [X] **MUUFL Dataset:** Collected by the ROSIS sensor over the University of Southern Mississippi, featuring 64 noise-free spectral bands and dual LiDAR rasters across a 325 × 220 grid with 11 urban classes.
-- [X] **Houston 2013 Dataset:** A benchmark from the 2013 IEEE GRSS Contest acquired by the ITRES CASI-1500 sensor, comprising 349 × 1905 pixels with 144 spectral bands and co-registered LiDAR DSM data.
+- [X] **Houston 2013 Dataset:** The Houston2013 dataset integrates HSI and LiDAR data, covering an area of 349 × 1905 pixels. The HSI component contains 144 spectral bands, providing rich detail for material and surface discrimination, while the LiDAR modality consists of a single elevation band, offering complementary structural information. 
+- [X] **Trento Dataset:** The Trento dataset provides HSI and LiDAR observations over a region of 166 × 600 pixels. The HSI data comprise 64 spectral bands, while the LiDAR modality includes two bands that capture elevation and intensity information.
+- [X] **MUUFL Dataset:** The MUUFL dataset provides HSI and LiDAR observations over a region of 325 × 220 pixels. The HSI data contain 64 spectral bands, while the LiDAR modality includes two bands capturing elevation and intensity information.
 
 ## Models
 The following conventional classifier methods will be available:
