@@ -37,5 +37,5 @@ The following classic backbone networks methods will be available:
 * [SpectralFormer](https://ieeexplore.ieee.org/abstract/document/9627165)
 * [EXViT](https://ieeexplore.ieee.org/abstract/document/10147258/)
 ## How to cite?
-This manuscript has been submitted to **Computers & Geosciences**. If you use this code or data, please cite it as follows once published:
+This manuscript has been submitted to **Information Fusion**. If you use this code or data, please cite it as follows once published:
 > Ouerhani, B., Ben Abbes, A., & Rhif, M.(Under Review). Alignment-Aware Cross-Modal Swin for Multisensor Information Fusion:Application to Hyperspectral–LiDAR Land-Cover Mapping *Information Fusion*.
