@@ -38,4 +38,4 @@ The following classic backbone networks methods will be available:
 * [EXViT](https://ieeexplore.ieee.org/abstract/document/10147258/)
 ## How to cite?
 This manuscript has been submitted to **Information Fusion**. If you use this code or data, please cite it as follows once published:
-> Ouerhani, B., Rhif, M., & Ben Abbes, A.(Under Review). Alignment-Aware Cross-Modal Swin for Multisensor Information Fusion:Application to Hyperspectral–LiDAR Land-Cover Mapping, *Information Fusion*.
+> Ouerhani, B., Rhif, M., & Ben Abbes, A.(Under Review). ACMS: Alignment-Aware Cross-Modal Swin Transformer with Gated Fusion for Robust Hyperspectral–LiDAR Classification, *Information Fusion*.
