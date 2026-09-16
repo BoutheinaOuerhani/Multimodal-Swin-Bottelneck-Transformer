@@ -1,5 +1,6 @@
 ```markdown
 # GCMS: Gated Cross-Modal Swin Transformer for Hyperspectral–LiDAR Classification
+<img width="1536" height="1024" alt="gcms_architecture" src="https://github.com/user-attachments/assets/1358c193-6a65-4c7b-b74e-c8d67d3166b3" />
 
 ## Summary
 
