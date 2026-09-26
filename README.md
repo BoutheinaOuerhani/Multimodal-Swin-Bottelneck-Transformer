@@ -1,112 +1,132 @@
-```markdown
-# GCMS: Gated Cross-Modal Swin Transformer for Hyperspectral–LiDAR Classification
-<img width="1536" height="1024" alt="gcms_architecture" src="https://github.com/user-attachments/assets/1358c193-6a65-4c7b-b74e-c8d67d3166b3" />
-
-## Summary
-
-GCMS is a gated cross-modal Swin Transformer designed for multimodal hyperspectral image (HSI) and LiDAR classification. The framework employs modality-specific Swin Transformer encoders to extract hierarchical spatial-spectral and structural representations from HSI and LiDAR data. These modality-specific features are integrated through reciprocal cross-modal attention, learnable directional weighting, and token- and feature-dependent gating, followed by shared contextual refinement for discriminative land-cover classification.
-
-<img width="2145" height="698" alt="GCMS architecture" src="https://github.com/user-attachments/assets/205d9a72-8d09-40b8-902c-5570e6c010e4" />
-
-### Key Features
-
-- [X] **Dual-Stream Swin Architecture**: Uses modality-specific Swin Transformer encoders to model hierarchical spatial-spectral information from HSI and complementary structural information from LiDAR.
-
-- [X] **Bidirectional Cross-Modal Attention**: Employs reciprocal cross-modal attention to enable information exchange between HSI and LiDAR representations in both directions.
-
-- [X] **Learnable Directional Weighting**: Introduces learnable weighting of the two cross-modal attention directions to adaptively combine complementary information from HSI-to-LiDAR and LiDAR-to-HSI interactions.
-
-- [X] **Token- and Feature-Dependent Gating**: Applies a gating mechanism to adaptively modulate the fused cross-modal representation according to token- and feature-level information.
-
-- [X] **Multi-Benchmark Evaluation**: Evaluated on three widely used HSI–LiDAR benchmark datasets: Houston 2013, Trento, and MUUFL.
-
-- [X] **Parameter-Efficient Design**: The proposed GCMS model contains 0.334M trainable parameters while providing competitive classification performance across the evaluated benchmarks.
-
-## Installation & Environment Setup
-
-The main software environment uses **Python 3.10+**.
-
-The complete list of required packages is provided in the repository. Key dependencies include:
-
-### Deep Learning
-- `torch` (PyTorch)
-- `torchvision`
-- `timm`
-
-### Remote Sensing & Scientific Computing
-- `spectral`
-- `scipy`
-
-### Data Processing
-- `numpy`
-- `pandas`
-- `scikit-learn`
-
-### Visualization
-- `matplotlib`
-- `seaborn`
-- `tqdm`
-
-## Datasets
-
-### Houston 2013
-
-The Houston 2013 dataset integrates hyperspectral and LiDAR observations over an area of 349 × 1905 pixels. The HSI data contain 144 spectral bands, while the LiDAR data provide complementary elevation information.
-
-### Trento
-
-The Trento dataset provides co-registered HSI and LiDAR observations over a region of 166 × 600 pixels. The HSI data contain 64 spectral bands, while the LiDAR data contain two channels providing complementary structural information.
-
-### MUUFL
-
-The MUUFL dataset provides HSI and LiDAR observations over a region of 325 × 220 pixels. The HSI data contain 64 spectral bands, while the LiDAR data contain two channels providing complementary structural information.
-
-## Models
-
-The repository includes implementations or references to several conventional and deep-learning-based methods used for comparison.
-
-### Conventional Classifiers
-
-- [RF](https://ieeexplore.ieee.org/document/1396322)
-- [SVM](https://ieeexplore.ieee.org/document/1323134)
-
-### CNN-Based Methods
-
-- [Coupled CNN](https://ieeexplore.ieee.org/abstract/document/8985546/)
-- [CCR-NET](https://ieeexplore.ieee.org/abstract/document/9598903)
-
-### Transformer-Based Methods
-
-- [SpectralFormer](https://ieeexplore.ieee.org/abstract/document/9627165)
-- [EXViT](https://ieeexplore.ieee.org/abstract/document/10147258)
-
+# GCMS: Gated Cross-Modal Swin Transformer with Bidirectional Attention for Hyperspectral–LiDAR Classification
+ 
+Official implementation of **GCMS**, a compact multimodal Transformer for HSI–LiDAR land-use/land-cover (LULC) classification. GCMS combines modality-specific Swin-style encoders, bidirectional cross-modal attention, learnable directional weighting, and a data-dependent gate to adaptively fuse hyperspectral and LiDAR representations.
+ 
+> **GCMS: Gated Cross-Modal Swin Transformer with Bidirectional Attention for Hyperspectral–LiDAR Classification**
+> Boutheina Ouerhani, Manel Rhif, Ali Ben Abbes
+> University of Manouba, Tunisia
+ 
+<p align="center">
+  <img src="assets/gcms_architecture.png" alt="GCMS architecture" width="900"/>
+</p>
+## Highlights
+ 
+- **Modality-specific Swin encoders**: separable-convolution tokenization + 4 stacked Swin-style window-attention blocks with bottleneck refinement, learned independently for HSI and LiDAR.
+- **Gated bidirectional cross-modal fusion**: reciprocal cross-attention (H←L and L←H) combined via global learnable directional coefficients and a token/feature-wise sigmoid gate.
+- **Residual fusion + shared Transformer encoder** refine the fused multimodal tokens before attention-pooling classification.
+- **Extremely compact**: only **0.334M** trainable parameters — fewer than ExViT, SpectralFormer, and MSFMamba, comparable to MFT.
+- **Robustness analysis**: tolerant to small horizontal HSI–LiDAR misregistration and mild HSI Poisson noise (without retraining).
 ## Results
-
-GCMS is evaluated on the Houston 2013, Trento, and MUUFL datasets using overall accuracy (OA), average accuracy (AA), and the kappa coefficient ($\kappa$).
-
-| Dataset | OA (%) |
-|---------|--------:|
-| Houston 2013 | 92.51 |
-| Trento | 99.93 |
-| MUUFL | 92.18 |
-
-For complete experimental results, ablation studies, and implementation details, please refer to the manuscript and the accompanying materials.
-
-## Code and Supporting Materials
-
-The implementation of GCMS is publicly available in this repository.
-
-The supporting data and materials used in the experiments are also provided through the project resources.
-
-## How to Cite
-
-This work has been submitted to **Neurocomputing**. If you use this code or the associated materials in your research, please cite the following work once it is published:
-
-> Ouerhani, B., Rhif, M., & Ben Abbes, A.  
-> GCMS: Gated Cross-Modal Swin Transformer for Hyperspectral–LiDAR Classification.  
-> *Neurocomputing*, under review.
+ 
+| Dataset      | OA (%) | AA (%) | Kappa (%) |
+|--------------|:------:|:------:|:---------:|
+| Houston2013  | 92.51  | 93.41  | 91.87     |
+| Trento       | 99.93  | 99.89  | 99.91     |
+| MUUFL        | 92.18  | 92.97  | 89.68     |
+ 
+| Model         | Params (M) | FLOPs (M) | Inference (s) |
+|---------------|:----------:|:---------:|:-------------:|
+| CCR-Net       | 0.09       | 0.28      | 0.06          |
+| Coupled CNN   | 0.11       | 0.33      | 0.37          |
+| ExViT         | 0.52       | 82.30     | 7.01          |
+| MFT           | 0.32       | 50.60     | 1.78          |
+| MSFMamba      | 1.22       | 64.70     | 1.46          |
+| SpectralFormer| 0.62       | 73.72     | 6.85          |
+| **GCMS (Ours)** | **0.33** | **69.85** | **4.01**     |
+ 
+See the paper for full per-class results, ablations (modality contribution, fusion components, attention directionality), and robustness experiments.
+ 
+## Repository Structure
+ 
+```
+GCMS/
+├── assets/                  # figures used in this README
+├── configs/                 # dataset-specific config files (patch size, dims, hyperparams)
+├── data/                    # dataset loading / preprocessing scripts
+├── models/
+│   ├── tokenizer.py         # separable-conv patch tokenizer
+│   ├── swin_encoder.py      # modality-specific Swin-style encoder (window/shifted-window attention + bottleneck)
+│   ├── cross_modal_fusion.py# bidirectional cross-attention, directional weighting, gating
+│   ├── shared_encoder.py    # shared Transformer encoder
+│   └── gcms.py               # full GCMS model assembly
+├── train.py                 # training entry point
+├── eval.py                  # evaluation / metrics (OA, AA, Kappa, per-class)
+├── inference.py              # pixel-wise inference & land-cover map reconstruction
+├── requirements.txt
+└── README.md
+```
+ 
+> Adjust this tree to match your actual code layout before publishing.
+ 
+## Datasets
+ 
+GCMS is evaluated on three public HSI–LiDAR benchmarks:
+ 
+| Dataset      | Scene size    | HSI bands | LiDAR bands | Classes | Patch size |
+|--------------|---------------|:---------:|:-----------:|:-------:|:----------:|
+| Houston2013  | 349 × 1905    | 144       | 1           | 15      | 14 × 14    |
+| Trento       | 166 × 600     | 64        | 2           | 6       | 9 × 9      |
+| MUUFL        | 325 × 220     | 64        | 2           | 11      | 11 × 11    |
+ 
+Download links:
+- Houston2013 — IEEE GRSS Data Fusion Contest 2013
+- Trento — see [MDAS benchmark](https://essd.copernicus.org/articles/15/113/2023/)
+- MUUFL — [GatorSense/MUUFLGulfport](https://github.com/GatorSense/MUUFLGulfport)
+Place raw data under `data/<dataset_name>/` following the loader scripts' expected format, or update `configs/*.yaml` with your own paths. Train/test splits follow the standard predefined partitions used in prior work (see paper Section 4.2.1).
+ 
+## Installation
+ 
+```bash
+git clone https://github.com/<your-username>/GCMS.git
+cd GCMS
+pip install -r requirements.txt
+```
+ 
+Suggested `requirements.txt`:
+```
+torch>=2.0
+numpy
+scipy
+scikit-learn
+einops
+pyyaml
+matplotlib
+tqdm
+```
+ 
+## Usage
+ 
+**Training**
+```bash
+python train.py --config configs/houston2013.yaml
+```
+ 
+**Evaluation**
+```bash
+python eval.py --config configs/houston2013.yaml --checkpoint checkpoints/gcms_houston2013.pth
+```
+ 
+**Pixel-wise inference / land-cover map**
+```bash
+python inference.py --config configs/houston2013.yaml --checkpoint checkpoints/gcms_houston2013.pth --output maps/houston2013_pred.png
+```
+ 
+## Key Hyperparameters
+ 
+| Parameter | Value |
+|---|---|
+| Embedding dimension $D$ | 16 |
+| Attention heads $h$ | 8 |
+| Swin window size $M$ | 7 |
+| Bottleneck reduction $r$ | 4 |
+| Shared encoder layers $L_s$ | 2 |
+| Feed-forward dim $D_{ff}$ | 64 |
+| Dropout $p$ | 0.05 |
+| Optimizer | AdamW, lr = 3×10⁻⁴, weight decay = 1×10⁻⁵ |
+| Batch size | 64 |
+| Epochs | 1000 (Houston2013) / 500 (MUUFL) / 200 (Trento) |
+ 
 
 ## License
-
-Please refer to the repository license for the terms governing the use and distribution of this code.
-```
+ 
+Specify a license for your repository (e.g., MIT, Apache 2.0). If unspecified, the code defaults to "all rights reserved."
