@@ -28,10 +28,13 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
  
 ```
 Multimodal-Swin-Bottelneck-Transformer/
-│ ├── model/
+│
+├── model/
 │ └── model.ipynb
-│ ├── gcms-architecture.png
-│ ├── .gitignore
+│
+├── gcms-architecture.png
+│
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
@@ -101,8 +104,6 @@ python inference.py --config configs/houston2013.yaml --checkpoint checkpoints/g
 | Bottleneck reduction $r$ | 4 |
 | Shared encoder layers $L_s$ | 2 |
 | Feed-forward dim $D_{ff}$ | 64 |
-| Dropout $p$ | 0.05 |
-| Optimizer | AdamW, lr = 3×10⁻⁴, weight decay = 1×10⁻⁵ |
 | Batch size | 64 |
 | Epochs | 1000 (Houston2013) / 500 (MUUFL) / 200 (Trento) |
  
