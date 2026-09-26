@@ -7,8 +7,9 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
 > University of Manouba, Tunisia
  
 <p align="center">
-  <img src="assets/gcms-architecture.png" alt="GCMSarchitecture" width=""/>
+  <img src="figures/gcms_architecture.png" width="900">
 </p>
+
 ## Highlights
  
 - **Modality-specific Swin encoders**: separable-convolution tokenization + 4 stacked Swin-style window-attention blocks with bottleneck refinement, learned independently for HSI and LiDAR.
