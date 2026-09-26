@@ -7,7 +7,7 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
 > University of Manouba, Tunisia
  
 <p align="center">
-  <img src="gcms_architecture.png" width="900">
+  <img src="./gcms_architecture.png" width="900">
 </p>
 
 ## Highlights
