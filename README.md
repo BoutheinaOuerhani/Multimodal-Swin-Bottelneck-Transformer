@@ -27,20 +27,12 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
 ## Repository Structure
  
 ```
-GCMS/
-├── assets/                  # figures used in this README
-├── configs/                 # dataset-specific config files (patch size, dims, hyperparams)
-├── data/                    # dataset loading / preprocessing scripts
-├── models/
-│   ├── tokenizer.py         # separable-conv patch tokenizer
-│   ├── swin_encoder.py      # modality-specific Swin-style encoder (window/shifted-window attention + bottleneck)
-│   ├── cross_modal_fusion.py# bidirectional cross-attention, directional weighting, gating
-│   ├── shared_encoder.py    # shared Transformer encoder
-│   └── gcms.py               # full GCMS model assembly
-├── train.py                 # training entry point
-├── eval.py                  # evaluation / metrics (OA, AA, Kappa, per-class)
-├── inference.py              # pixel-wise inference & land-cover map reconstruction
-├── requirements.txt
+Multimodal-Swin-Bottelneck-Transformer/
+│ ├── model/
+│ └── model.ipynb
+│ ├── gcms-architecture.png
+│ ├── .gitignore
+├── LICENSE
 └── README.md
 ```
  
