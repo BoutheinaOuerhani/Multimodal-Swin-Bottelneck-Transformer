@@ -31,9 +31,7 @@ Multimodal-Swin-Bottelneck-Transformer/
 │
 ├── model/
 │ └── model.ipynb
-│
 ├── gcms-architecture.png
-│
 ├── .gitignore
 ├── LICENSE
 └── README.md
