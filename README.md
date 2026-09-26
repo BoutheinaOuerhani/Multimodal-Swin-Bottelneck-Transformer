@@ -68,29 +68,6 @@ pip install -r requirements.txt
 ```bash
 python train.py --config configs/houston2013.yaml
 ```
- # GCMS
-
-## Overview
-
-## GCMS Architecture
-
-[architecture image]
-
-## Repository Structure
-
-[repository structure]
-
-## Compared Models
-
-[table above]
-
-## Datasets
-
-## Training
-
-## Results
-
-## Citation
 
 **Evaluation**
 ```bash
