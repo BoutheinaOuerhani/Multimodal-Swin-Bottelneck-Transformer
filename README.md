@@ -36,7 +36,18 @@ Multimodal-Swin-Bottelneck-Transformer/
 ├── LICENSE
 └── README.md
 ```
- 
+## Compared Models
+
+| Model | Main approach |
+|---|---|
+| **CCR-Net** | Coupled CNN-based multimodal fusion |
+| **Coupled CNN** | Coupled CNN branches for HSI and LiDAR |
+| **ExViT** | Extended Vision Transformer for multimodal fusion |
+| **MFT** | Multimodal Fusion Transformer |
+| **MSFMamba** | Multi-scale Mamba-based feature extraction and fusion |
+| **SpectralFormer** | Transformer-based hyperspectral feature learning |
+| **GCMS (Ours)** | Swin Transformer + bidirectional cross-modal attention + gated fusion |
+
 ## Datasets
  
 GCMS is evaluated on three public HSI–LiDAR benchmarks:
