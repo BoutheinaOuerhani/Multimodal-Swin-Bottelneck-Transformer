@@ -91,7 +91,16 @@ python inference.py --config configs/houston2013.yaml --checkpoint checkpoints/g
 | Feed-forward dim $D_{ff}$ | 64 |
 | Batch size | 64 |
 | Epochs | 1000 (Houston2013) / 500 (MUUFL) / 200 (Trento) |
- 
+ ## Compared Models
+| Model | Main approach |
+|---|---|
+| **CCR-Net** | Coupled CNN-based multimodal fusion |
+| **Coupled CNN** | Coupled CNN branches for HSI and LiDAR |
+| **ExViT** | Extended Vision Transformer for multimodal fusion |
+| **MFT** | Multimodal Fusion Transformer |
+| **MSFMamba** | Multi-scale Mamba-based feature extraction and fusion |
+| **SpectralFormer** | Transformer-based hyperspectral feature learning |
+| **GCMS (Ours)** | Swin Transformer + bidirectional cross-modal attention + gated fusion |
 
 ## License
  
