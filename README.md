@@ -39,8 +39,6 @@ Multimodal-Swin-Bottelneck-Transformer/
 └── README.md
 ```
  
-> Adjust this tree to match your actual code layout before publishing.
- 
 ## Datasets
  
 GCMS is evaluated on three public HSI–LiDAR benchmarks:
