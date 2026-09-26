@@ -7,7 +7,7 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
 > University of Manouba, Tunisia
  
 <p align="center">
-  <img src="assets/gcms-architecture.png" alt="GCMS architecture" width="900"/>
+  <img src="assets/gcms-architecture.png" alt="GCMSarchitecture" width="900"/>
 </p>
 ## Highlights
  
@@ -24,17 +24,7 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
 | Trento       | 99.93  | 99.89  | 99.91     |
 | MUUFL        | 92.18  | 92.97  | 89.68     |
  
-| Model         | Params (M) | FLOPs (M) | Inference (s) |
-|---------------|:----------:|:---------:|:-------------:|
-| CCR-Net       | 0.09       | 0.28      | 0.06          |
-| Coupled CNN   | 0.11       | 0.33      | 0.37          |
-| ExViT         | 0.52       | 82.30     | 7.01          |
-| MFT           | 0.32       | 50.60     | 1.78          |
-| MSFMamba      | 1.22       | 64.70     | 1.46          |
-| SpectralFormer| 0.62       | 73.72     | 6.85          |
-| **GCMS (Ours)** | **0.33** | **69.85** | **4.01**     |
- 
-See the paper for full per-class results, ablations (modality contribution, fusion components, attention directionality), and robustness experiments.
+
  
 ## Repository Structure
  
