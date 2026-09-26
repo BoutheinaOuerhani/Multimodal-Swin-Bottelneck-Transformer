@@ -102,8 +102,4 @@ python inference.py --config configs/houston2013.yaml --checkpoint checkpoints/g
 | Feed-forward dim $D_{ff}$ | 64 |
 | Batch size | 64 |
 | Epochs | 1000 (Houston2013) / 500 (MUUFL) / 200 (Trento) |
- 
 
-## License
- 
-Specify a license for your repository (e.g., MIT, Apache 2.0). If unspecified, the code defaults to "all rights reserved."
