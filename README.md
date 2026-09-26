@@ -61,17 +61,6 @@ cd GCMS
 pip install -r requirements.txt
 ```
  
-Suggested `requirements.txt`:
-```
-torch>=2.0
-numpy
-scipy
-scikit-learn
-einops
-pyyaml
-matplotlib
-tqdm
-```
  
 ## Usage
  
@@ -79,7 +68,30 @@ tqdm
 ```bash
 python train.py --config configs/houston2013.yaml
 ```
- 
+ # GCMS
+
+## Overview
+
+## GCMS Architecture
+
+[architecture image]
+
+## Repository Structure
+
+[repository structure]
+
+## Compared Models
+
+[table above]
+
+## Datasets
+
+## Training
+
+## Results
+
+## Citation
+
 **Evaluation**
 ```bash
 python eval.py --config configs/houston2013.yaml --checkpoint checkpoints/gcms_houston2013.pth
