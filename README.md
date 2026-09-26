@@ -6,9 +6,7 @@ Official implementation of **GCMS**, a compact multimodal Transformer for HSI–
 > Boutheina Ouerhani, Manel Rhif, Ali Ben Abbes
 > University of Manouba, Tunisia
  
-<p align="center">
-  <img src="./gcms_architecture.png" width="900">
-</p>
+![GCMS Architecture](./GCMS_architecture.png)
 
 ## Highlights
  
