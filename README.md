@@ -59,10 +59,10 @@ GCMS is evaluated on three public HSI–LiDAR benchmarks:
 | MUUFL        | 325 × 220     | 64        | 2           | 11      | 11 × 11    |
  
 Download links:
-- Houston2013 — IEEE GRSS Data Fusion Contest 2013
-- Trento — see [MDAS benchmark](https://essd.copernicus.org/articles/15/113/2023/)
-- MUUFL — [GatorSense/MUUFLGulfport](https://github.com/GatorSense/MUUFLGulfport)
-Place raw data under `data/<dataset_name>/` following the loader scripts' expected format, or update `configs/*.yaml` with your own paths. Train/test splits follow the standard predefined partitions used in prior work (see paper Section 4.2.1).
+
+- **Houston2013** — [IEEE GRSS Data Fusion Contest 2013](http://www.grss-ieee.org/community/technical-committees/data-fusion/2013-ieee-grss-data-fusion-contest/)
+- **Trento** — [Trento Dataset](https://github.com/tyust-dayu/Trento)
+- **MUUFL** — [GatorSense/MUUFLGulfport](https://github.com/GatorSense/MUUFLGulfport)
  
 ## Installation
  
